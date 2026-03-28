@@ -17,14 +17,17 @@ body {
   font-family: 'Lato', sans-serif;
   color: #254857;
   background-color: #fff;
+  padding-top: 68px;
 }
 
 /* =========================================
    NAVBAR
    ========================================= */
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   background-color: #5790A1;
   z-index: 100;
   padding: 0 2rem;
@@ -649,7 +652,7 @@ body {
 
   .nav-links {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 68px;
     left: 0;
     right: 0;
