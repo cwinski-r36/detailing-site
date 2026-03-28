@@ -1,0 +1,774 @@
+/* === Route36 Brand Colors ===
+  Steel:   #254857 (primary dark)
+  Slate:   #5790A1 (mid blue)
+  Light:   #B6C9D2
+  Ochre:   #EBAA20 (gold accent)
+  Clay:    #C94B38 (warm red)
+  Steel-grey: #949CA6
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #254857;
+  background-color: #fff;
+}
+
+/* =========================================
+   NAVBAR
+   ========================================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: #5790A1;
+  z-index: 100;
+  padding: 0 2rem;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.logo-placeholder {
+  color: #fff;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-links a {
+  color: #B6C9D2;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #EBAA20;
+}
+
+/* Hamburger button */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Hamburger open state */
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* =========================================
+   HERO
+   ========================================= */
+.hero {
+  background-color: #254857;
+  background-image:
+    linear-gradient(to right, rgba(37, 72, 87, 0.85) 40%, rgba(37, 72, 87, 0.4) 100%),
+    url('https://images.unsplash.com/photo-1744543955714-8a64a275093e?w=1600&q=80&fit=crop&auto=format');
+  background-size: cover;
+  background-position: center;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 5rem 2rem;
+}
+
+.hero-content {
+  max-width: 780px;
+  margin-left: calc((100vw - 1200px) / 2);
+  padding-left: 2rem;
+}
+
+.hero-eyebrow {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #EBAA20;
+  margin-bottom: 1.25rem;
+}
+
+.hero-content h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #fff;
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.5rem;
+}
+
+.hero-sub {
+  color: #B6C9D2;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.75;
+  margin-bottom: 2.5rem;
+  max-width: 560px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2.25rem;
+  border-radius: 3px;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn-primary {
+  background-color: #EBAA20;
+  color: #254857;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #B6C9D2;
+}
+
+/* =========================================
+   GENERIC SECTIONS
+   ========================================= */
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem;
+}
+
+.section-alt {
+  background-color: #f5f7f8;
+  padding: 6rem 2rem;
+}
+
+.section-alt > * {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section h2,
+.section-alt h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #254857;
+  margin-bottom: 1rem;
+}
+
+.section p,
+.section-alt p {
+  font-family: 'Lato', sans-serif;
+  color: #5790A1;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* =========================================
+   PAGE HERO (inner pages)
+   ========================================= */
+.page-hero {
+  background-color: #254857;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.page-hero-content {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.page-hero h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  color: #fff;
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-top: 0.5rem;
+}
+
+.hero-eyebrow-light {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #EBAA20;
+  margin-bottom: 0.5rem;
+}
+
+/* =========================================
+   ABOUT PAGE
+   ========================================= */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+}
+
+.about-block h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #254857;
+  margin-bottom: 0.75rem;
+}
+
+.about-block p {
+  font-family: 'Lato', sans-serif;
+  color: #5790A1;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* =========================================
+   CONTACT PAGE
+   ========================================= */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-form-wrap h2,
+.contact-info h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #254857;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #254857;
+  margin-bottom: 0.4rem;
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #B6C9D2;
+  border-radius: 3px;
+  color: #254857;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #5790A1;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.info-block {
+  margin-bottom: 1.5rem;
+}
+
+.info-label {
+  font-family: 'Josefin Sans', sans-serif !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase;
+  color: #EBAA20 !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.contact-info p {
+  font-family: 'Lato', sans-serif;
+  color: #254857 !important;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* =========================================
+   GALLERY PAGE
+   ========================================= */
+.gallery-section-header {
+  margin-bottom: 2.5rem;
+}
+
+.gallery-section-header h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #254857;
+  margin-bottom: 0.4rem;
+}
+
+.gallery-section-header p {
+  font-family: 'Lato', sans-serif;
+  color: #5790A1;
+  font-size: 1rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.before-after-card {
+  border: 1px solid #B6C9D2;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.ba-images {
+  display: flex;
+  height: 220px;
+}
+
+.ba-panel {
+  flex: 1;
+  position: relative;
+}
+
+.img-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: #B6C9D2;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 8px,
+    rgba(255,255,255,0.25) 8px,
+    rgba(255,255,255,0.25) 16px
+  );
+}
+
+.ba-label {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.6rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+}
+
+.ba-label.before {
+  background-color: #C94B38;
+  color: #fff;
+}
+
+.ba-label.after {
+  background-color: #EBAA20;
+  color: #254857;
+}
+
+.ba-divider {
+  width: 3px;
+  background-color: #fff;
+  flex-shrink: 0;
+}
+
+.card-caption {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9rem;
+  color: #254857 !important;
+  padding: 0.85rem 1rem;
+  border-top: 1px solid #B6C9D2;
+}
+
+/* =========================================
+   PACKAGES SECTION
+   ========================================= */
+.packages-section {
+  background-color: #f5f7f8;
+  padding: 6rem 2rem;
+}
+
+.packages-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  margin-bottom: 3rem;
+}
+
+.section-heading--sub {
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.section-eyebrow {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #EBAA20;
+  margin-bottom: 0.5rem;
+}
+
+.section-heading h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #254857;
+}
+
+.section-sub {
+  font-family: 'Lato', sans-serif;
+  color: #5790A1;
+  font-size: 1rem;
+  margin-top: 0.4rem;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.package-card {
+  background: #fff;
+  border: 1px solid #B6C9D2;
+  border-radius: 4px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.package-card--featured {
+  border-color: #254857;
+  border-width: 2px;
+}
+
+.package-badge {
+  position: absolute;
+  top: -1px;
+  right: 1.5rem;
+  background-color: #EBAA20;
+  color: #254857;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: 0 0 4px 4px;
+}
+
+.package-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #B6C9D2;
+}
+
+.package-header h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #254857;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.4rem;
+}
+
+.package-price {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #5790A1;
+}
+
+.package-features {
+  list-style: none;
+  flex: 1;
+  margin-bottom: 2rem;
+}
+
+.package-features li {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.95rem;
+  color: #254857;
+  padding: 0.5rem 0 0.5rem 1.25rem;
+  border-bottom: 1px solid #f0f3f4;
+  position: relative;
+}
+
+.package-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #EBAA20;
+  font-weight: 700;
+}
+
+.extras-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.extra-card {
+  background: #fff;
+  border: 1px solid #B6C9D2;
+  border-radius: 4px;
+  padding: 1.25rem 1rem;
+  text-align: center;
+}
+
+.extra-name {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #254857;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.4rem;
+}
+
+.extra-price {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #5790A1;
+}
+
+/* =========================================
+   RESPONSIVE — TABLET (max 900px)
+   ========================================= */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.75rem;
+  }
+
+  .page-hero h1 {
+    font-size: 2.25rem;
+  }
+}
+
+/* =========================================
+   RESPONSIVE — MOBILE (max 768px)
+   ========================================= */
+@media (max-width: 768px) {
+
+  /* Nav — show hamburger, hide links by default */
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background-color: #254857;
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 70vh;
+    padding: 4rem 1.5rem;
+  }
+
+  .hero-content {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .hero-content h1 {
+    font-size: 2.25rem;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 0.8rem 1.75rem;
+    font-size: 0.8rem;
+  }
+
+  /* Sections */
+  .section,
+  .packages-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .section-alt {
+    padding: 4rem 1.5rem;
+  }
+
+  /* Page hero */
+  .page-hero {
+    padding: 3rem 1.5rem;
+  }
+
+  .page-hero h1 {
+    font-size: 2rem;
+  }
+
+  /* About */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Packages */
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .extras-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section-heading h2 {
+    font-size: 1.75rem;
+  }
+
+  .section-heading--sub {
+    margin-top: 3rem;
+  }
+}
+
+/* =========================================
+   RESPONSIVE — SMALL MOBILE (max 480px)
+   ========================================= */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn {
+    text-align: center;
+  }
+
+  .extras-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ba-images {
+    height: 160px;
+  }
+
+  .page-hero h1 {
+    font-size: 1.75rem;
+  }
+}

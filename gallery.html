@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Noah's Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo-placeholder">[ Logo ]</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links">
+        <a href="about.html">About</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+  </script>
+
+  <!-- Page Header -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <p class="hero-eyebrow">Our Work</p>
+      <h1>Before &amp; After</h1>
+    </div>
+  </section>
+
+  <!-- Car Cleaning Section -->
+  <section class="section">
+    <div class="gallery-section-header">
+      <h2>Car Cleaning</h2>
+      <p>A look at the results we deliver — inside and out.</p>
+    </div>
+    <div class="gallery-grid">
+
+      <div class="before-after-card">
+        <div class="ba-images">
+          <div class="ba-panel">
+            <div class="img-placeholder"></div>
+            <span class="ba-label before">Before</span>
+          </div>
+          <div class="ba-divider"></div>
+          <div class="ba-panel">
+            <div class="img-placeholder"></div>
+            <span class="ba-label after">After</span>
+          </div>
+        </div>
+        <p class="card-caption">Exterior Detail — Full Wash &amp; Polish</p>
+      </div>
+
+      <div class="before-after-card">
+        <div class="ba-images">
+          <div class="ba-panel">
+            <div class="img-placeholder"></div>
+            <span class="ba-label before">Before</span>
+          </div>
+          <div class="ba-divider"></div>
+          <div class="ba-panel">
+            <div class="img-placeholder"></div>
+            <span class="ba-label after">After</span>
+          </div>
+        </div>
+        <p class="card-caption">Interior Detail — Deep Clean &amp; Vacuum</p>
+      </div>
+
+      <div class="before-after-card">
+        <div class="ba-images">
+          <div class="ba-panel">
+            <div class="img-placeholder"></div>
+            <span class="ba-label before">Before</span>
+          </div>
+          <div class="ba-divider"></div>
+          <div class="ba-panel">
+            <div class="img-placeholder"></div>
+            <span class="ba-label after">After</span>
+          </div>
+        </div>
+        <p class="card-caption">Wheels &amp; Tires — Decontamination</p>
+      </div>
+
+      <div class="before-after-card">
+        <div class="ba-images">
+          <div class="ba-panel">
+            <div class="img-placeholder"></div>
+            <span class="ba-label before">Before</span>
+          </div>
+          <div class="ba-divider"></div>
+          <div class="ba-panel">
+            <div class="img-placeholder"></div>
+            <span class="ba-label after">After</span>
+          </div>
+        </div>
+        <p class="card-caption">Engine Bay — Degreased &amp; Cleaned</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Trash Can Cleaning Section -->
+  <section class="section section-alt">
+    <div class="gallery-section-header">
+      <h2>Trash Can Cleaning</h2>
+      <p>Sanitized, deodorized, and looking brand new.</p>
+    </div>
+    <div class="gallery-grid">
+
+      <div class="before-after-card">
+        <div class="ba-images">
+          <div class="ba-panel">
+            <div class="img-placeholder"></div>
+            <span class="ba-label before">Before</span>
+          </div>
+          <div class="ba-divider"></div>
+          <div class="ba-panel">
+            <div class="img-placeholder"></div>
+            <span class="ba-label after">After</span>
+          </div>
+        </div>
+        <p class="card-caption">96-Gallon Bin — Full Sanitize</p>
+      </div>
+
+      <div class="before-after-card">
+        <div class="ba-images">
+          <div class="ba-panel">
+            <div class="img-placeholder"></div>
+            <span class="ba-label before">Before</span>
+          </div>
+          <div class="ba-divider"></div>
+          <div class="ba-panel">
+            <div class="img-placeholder"></div>
+            <span class="ba-label after">After</span>
+          </div>
+        </div>
+        <p class="card-caption">Recycling Bin — Deep Clean</p>
+      </div>
+
+      <div class="before-after-card">
+        <div class="ba-images">
+          <div class="ba-panel">
+            <div class="img-placeholder"></div>
+            <span class="ba-label before">Before</span>
+          </div>
+          <div class="ba-divider"></div>
+          <div class="ba-panel">
+            <div class="img-placeholder"></div>
+            <span class="ba-label after">After</span>
+          </div>
+        </div>
+        <p class="card-caption">64-Gallon Bin — Deodorize &amp; Rinse</p>
+      </div>
+
+      <div class="before-after-card">
+        <div class="ba-images">
+          <div class="ba-panel">
+            <div class="img-placeholder"></div>
+            <span class="ba-label before">Before</span>
+          </div>
+          <div class="ba-divider"></div>
+          <div class="ba-panel">
+            <div class="img-placeholder"></div>
+            <span class="ba-label after">After</span>
+          </div>
+        </div>
+        <p class="card-caption">Commercial Bin — Industrial Clean</p>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

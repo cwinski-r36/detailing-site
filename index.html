@@ -1,1 +1,170 @@
-<h1>Coming soon</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noah's Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo-placeholder">[ Logo ]</div>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links">
+        <a href="about.html">About</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      nav.classList.toggle('open');
+    });
+  </script>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Noah and Halen Detailing</h1>
+      <p class="hero-sub">Your tagline or a short description goes here.</p>
+      <div class="hero-buttons">
+        <a href="about.html" class="btn btn-primary">Learn More</a>
+        <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages Section -->
+  <section class="packages-section" id="packages">
+    <div class="packages-container">
+      <div class="section-heading">
+        <p class="section-eyebrow">What We Offer</p>
+        <h2>Packages</h2>
+      </div>
+
+      <!-- Main Car Packages -->
+      <div class="packages-grid">
+
+        <div class="package-card">
+          <div class="package-header">
+            <h3>Car Wash</h3>
+            <p class="package-price">Starting at $XX</p>
+          </div>
+          <ul class="package-features">
+            <li>Exterior hand wash</li>
+            <li>Wheel &amp; tire clean</li>
+            <li>Windows cleaned</li>
+            <li>Interior vacuum</li>
+            <li>Dashboard wipe-down</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Book Now</a>
+        </div>
+
+        <div class="package-card package-card--featured">
+          <div class="package-badge">Most Popular</div>
+          <div class="package-header">
+            <h3>Car Detail</h3>
+            <p class="package-price">Starting at $XX</p>
+          </div>
+          <ul class="package-features">
+            <li>Full exterior hand wash &amp; dry</li>
+            <li>Clay bar treatment</li>
+            <li>Wheel &amp; tire deep clean</li>
+            <li>Windows cleaned inside &amp; out</li>
+            <li>Full interior vacuum &amp; shampoo</li>
+            <li>Leather &amp; surface conditioning</li>
+            <li>Air freshener</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Book Now</a>
+        </div>
+
+      </div>
+
+      <!-- Extra Services -->
+      <div class="section-heading section-heading--sub">
+        <h2>Extra Services</h2>
+        <p class="section-sub">Add on to any package.</p>
+      </div>
+      <div class="extras-grid">
+        <div class="extra-card">
+          <p class="extra-name">Wax &amp; Polish</p>
+          <p class="extra-price">$XX</p>
+        </div>
+        <div class="extra-card">
+          <p class="extra-name">Ceramic Coating</p>
+          <p class="extra-price">$XX</p>
+        </div>
+        <div class="extra-card">
+          <p class="extra-name">Headlight Restoration</p>
+          <p class="extra-price">$XX</p>
+        </div>
+        <div class="extra-card">
+          <p class="extra-name">Odor Elimination</p>
+          <p class="extra-price">$XX</p>
+        </div>
+        <div class="extra-card">
+          <p class="extra-name">Engine Bay Clean</p>
+          <p class="extra-price">$XX</p>
+        </div>
+        <div class="extra-card">
+          <p class="extra-name">Pet Hair Removal</p>
+          <p class="extra-price">$XX</p>
+        </div>
+      </div>
+
+      <!-- Trash Can Cleaning -->
+      <div class="section-heading section-heading--sub">
+        <h2>Trash Can Cleaning</h2>
+        <p class="section-sub">Sanitized, deodorized, and looking brand new.</p>
+      </div>
+      <div class="packages-grid">
+
+        <div class="package-card">
+          <div class="package-header">
+            <h3>Single Bin</h3>
+            <p class="package-price">$XX per bin</p>
+          </div>
+          <ul class="package-features">
+            <li>High-pressure wash</li>
+            <li>Deodorize &amp; sanitize</li>
+            <li>Interior &amp; exterior scrub</li>
+            <li>Lid cleaned</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Book Now</a>
+        </div>
+
+        <div class="package-card package-card--featured">
+          <div class="package-badge">Best Value</div>
+          <div class="package-header">
+            <h3>Bundle — 3 Bins</h3>
+            <p class="package-price">$XX for 3</p>
+          </div>
+          <ul class="package-features">
+            <li>High-pressure wash on all bins</li>
+            <li>Deodorize &amp; sanitize</li>
+            <li>Interior &amp; exterior scrub</li>
+            <li>Lids cleaned</li>
+            <li>Discounted bundle rate</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Book Now</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
