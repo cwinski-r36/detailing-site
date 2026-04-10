@@ -51,6 +51,43 @@ body {
   text-decoration: none;
 }
 
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nav-logo svg {
+  height: 44px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.nav-logo-text .logo-line1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  color: #fff;
+}
+
+.nav-logo-text .logo-line2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.7rem;
+  letter-spacing: 0.28em;
+  color: #EBAA20;
+  margin-top: 0.3rem;
+}
+
 .nav-links {
   display: flex;
   gap: 2.5rem;
@@ -125,7 +162,7 @@ body {
 
 .hero-content {
   max-width: 780px;
-  margin-left: calc((100vw - 1200px) / 2);
+  margin-left: max(2rem, calc((100vw - 1200px) / 2));
   padding-left: 2rem;
 }
 
@@ -291,6 +328,140 @@ body {
   color: #5790A1;
   font-size: 1rem;
   line-height: 1.8;
+}
+
+/* =========================================
+   TEAM SECTION (About page)
+   ========================================= */
+.team-section-header {
+  margin-bottom: 2.5rem;
+}
+
+.team-section-header h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #254857;
+}
+
+.team-photos-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+}
+
+.team-photo-block img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 4px;
+  display: block;
+}
+
+.team-photos-row .team-photo-block:last-child img {
+  object-position: center;
+}
+
+.team-photo-caption {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5790A1 !important;
+  text-align: center;
+  margin-top: 0.6rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-card {
+  background: #fff;
+  border: 1px solid #B6C9D2;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.team-photo-placeholder {
+  width: 100%;
+  height: 260px;
+  background-color: #B6C9D2;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 8px,
+    rgba(255,255,255,0.25) 8px,
+    rgba(255,255,255,0.25) 16px
+  );
+}
+
+.team-info {
+  padding: 1.25rem 1.5rem;
+}
+
+.team-info h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #254857;
+  margin-bottom: 0.5rem;
+}
+
+.team-info p {
+  font-family: 'Lato', sans-serif;
+  color: #5790A1;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* =========================================
+   TESTIMONIALS (Contact page)
+   ========================================= */
+.testimonials-section h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #254857;
+  margin-bottom: 2.5rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: #fff;
+  border: 1px solid #B6C9D2;
+  border-radius: 4px;
+  padding: 1.75rem;
+}
+
+.testimonial-quote {
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #254857 !important;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.testimonial-name {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #EBAA20 !important;
 }
 
 /* =========================================

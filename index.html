@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Noah's Website</title>
+  <title>Flatiron Detail Co</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -14,7 +14,28 @@
   <!-- Navigation -->
   <header class="navbar">
     <div class="nav-container">
-      <div class="logo-placeholder">[ Logo ]</div>
+      <a href="index.html" class="nav-logo">
+        <svg viewBox="120 140 440 440" xmlns="http://www.w3.org/2000/svg">
+          <defs><clipPath id="logo-clip"><circle cx="340" cy="360" r="168"/></clipPath></defs>
+          <circle cx="340" cy="360" r="220" fill="#EBAA20"/>
+          <circle cx="340" cy="360" r="210" fill="#FFFFFF"/>
+          <circle cx="340" cy="360" r="168" fill="#254857"/>
+          <g clip-path="url(#logo-clip)">
+            <path d="M172 430 L172 528 L508 528 L508 430 L480 420 L460 390 L448 400 L436 370 L424 382 L410 350 L396 365 L382 330 L368 348 L354 310 L340 330 L326 308 L312 328 L298 345 L284 326 L270 348 L256 335 L242 360 L228 372 L214 358 L200 375 L186 395 Z" fill="#5790A1"/>
+            <polyline points="326,308 318,340 308,345 298,332 290,348 282,344 272,360 264,354 254,372 246,366 238,380" fill="none" stroke="#EBAA20" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="354,310 348,335 340,330 334,348 326,344 318,360 308,365 302,378" fill="none" stroke="#EBAA20" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="382,330 376,350 368,348 360,365 352,360 344,374" fill="none" stroke="#EBAA20" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="410,350 404,368 396,365 388,378 380,374 372,386" fill="none" stroke="#EBAA20" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            <polyline points="436,370 428,385 420,382 412,392 404,388 396,398 388,394" fill="none" stroke="#EBAA20" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <circle cx="340" cy="360" r="168" fill="none" stroke="#EBAA20" stroke-width="1.5"/>
+          <circle cx="340" cy="360" r="162" fill="none" stroke="#EBAA20" stroke-width="0.5" opacity="0.5"/>
+        </svg>
+        <span class="nav-logo-text">
+          <span class="logo-line1">FLATIRON</span>
+          <span class="logo-line2">DETAIL</span>
+        </span>
+      </a>
       <button class="nav-toggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
@@ -37,8 +58,8 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Noah and Halen Detailing</h1>
-      <p class="hero-sub">Your tagline or a short description goes here.</p>
+      <h1>We Make Your Car Shine.</h1>
+      <p class="hero-sub">Hand detailing &amp; trash can cleaning in Boulder, CO — done right, every time.</p>
       <div class="hero-buttons">
         <a href="about.html" class="btn btn-primary">Learn More</a>
         <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
@@ -60,7 +81,7 @@
         <div class="package-card">
           <div class="package-header">
             <h3>Car Wash</h3>
-            <p class="package-price">Starting at $XX</p>
+            <p class="package-price">Starting at $45</p>
           </div>
           <ul class="package-features">
             <li>Exterior hand wash</li>
@@ -76,7 +97,7 @@
           <div class="package-badge">Most Popular</div>
           <div class="package-header">
             <h3>Car Detail</h3>
-            <p class="package-price">Starting at $XX</p>
+            <p class="package-price">Starting at $150</p>
           </div>
           <ul class="package-features">
             <li>Full exterior hand wash &amp; dry</li>
@@ -86,6 +107,22 @@
             <li>Full interior vacuum &amp; shampoo</li>
             <li>Leather &amp; surface conditioning</li>
             <li>Air freshener</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Book Now</a>
+        </div>
+
+        <div class="package-card">
+          <div class="package-header">
+            <h3>Full Detail</h3>
+            <p class="package-price">Starting at $280</p>
+          </div>
+          <ul class="package-features">
+            <li>Everything in Car Detail</li>
+            <li>Full interior deep clean</li>
+            <li>Seat &amp; carpet shampoo</li>
+            <li>Door panel &amp; trunk detail</li>
+            <li>Engine bay clean</li>
+            <li>Paint correction prep</li>
           </ul>
           <a href="contact.html" class="btn btn-primary">Book Now</a>
         </div>
@@ -100,27 +137,11 @@
       <div class="extras-grid">
         <div class="extra-card">
           <p class="extra-name">Wax &amp; Polish</p>
-          <p class="extra-price">$XX</p>
-        </div>
-        <div class="extra-card">
-          <p class="extra-name">Ceramic Coating</p>
-          <p class="extra-price">$XX</p>
-        </div>
-        <div class="extra-card">
-          <p class="extra-name">Headlight Restoration</p>
-          <p class="extra-price">$XX</p>
-        </div>
-        <div class="extra-card">
-          <p class="extra-name">Odor Elimination</p>
-          <p class="extra-price">$XX</p>
-        </div>
-        <div class="extra-card">
-          <p class="extra-name">Engine Bay Clean</p>
-          <p class="extra-price">$XX</p>
+          <p class="extra-price">$25</p>
         </div>
         <div class="extra-card">
           <p class="extra-name">Pet Hair Removal</p>
-          <p class="extra-price">$XX</p>
+          <p class="extra-price">$35–$50</p>
         </div>
       </div>
 
@@ -134,7 +155,7 @@
         <div class="package-card">
           <div class="package-header">
             <h3>Single Bin</h3>
-            <p class="package-price">$XX per bin</p>
+            <p class="package-price">$20 per bin</p>
           </div>
           <ul class="package-features">
             <li>High-pressure wash</li>
@@ -149,7 +170,7 @@
           <div class="package-badge">Best Value</div>
           <div class="package-header">
             <h3>Bundle — 3 Bins</h3>
-            <p class="package-price">$XX for 3</p>
+            <p class="package-price">$50 for 3</p>
           </div>
           <ul class="package-features">
             <li>High-pressure wash on all bins</li>

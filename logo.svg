@@ -1,0 +1,67 @@
+<svg width="500" height="500" viewBox="0 0 680 720" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <clipPath id="circle-clip">
+    <circle cx="340" cy="360" r="168"/>
+  </clipPath>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+    .badge-text {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 700;
+      fill: #254857;
+      letter-spacing: 0.08em;
+      font-size: 28px;
+    }
+    .sub-text {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 600;
+      fill: #EBAA20;
+      letter-spacing: 0.28em;
+      font-size: 11px;
+    }
+  </style>
+</defs>
+
+<circle cx="340" cy="360" r="220" fill="#EBAA20"/>
+<circle cx="340" cy="360" r="210" fill="#FFFFFF"/>
+<circle cx="340" cy="360" r="168" fill="#254857"/>
+
+<g clip-path="url(#circle-clip)">
+  <path d="M172 430 L172 528 L508 528 L508 430
+           L480 420 L460 390 L448 400 L436 370
+           L424 382 L410 350 L396 365 L382 330
+           L368 348 L354 310 L340 330 L326 308
+           L312 328 L298 345 L284 326 L270 348
+           L256 335 L242 360 L228 372 L214 358
+           L200 375 L186 395 Z"
+        fill="#5790A1"/>
+  <polyline points="326,308 318,340 308,345 298,332 290,348 282,344 272,360 264,354 254,372 246,366 238,380"
+            fill="none" stroke="#EBAA20" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="354,310 348,335 340,330 334,348 326,344 318,360 308,365 302,378"
+            fill="none" stroke="#EBAA20" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="382,330 376,350 368,348 360,365 352,360 344,374"
+            fill="none" stroke="#EBAA20" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="410,350 404,368 396,365 388,378 380,374 372,386"
+            fill="none" stroke="#EBAA20" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="436,370 428,385 420,382 412,392 404,388 396,398 388,394"
+            fill="none" stroke="#EBAA20" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="172" y1="430" x2="508" y2="430" stroke="#EBAA20" stroke-width="0.8" opacity="0.4"/>
+</g>
+
+<circle cx="340" cy="360" r="168" fill="none" stroke="#EBAA20" stroke-width="1.5"/>
+<circle cx="340" cy="360" r="162" fill="none" stroke="#EBAA20" stroke-width="0.5" opacity="0.5"/>
+
+<path id="top-arc" d="M 162,360 A 178,178 0 0,1 518,360" fill="none"/>
+<text class="badge-text">
+  <textPath href="#top-arc" startOffset="50%" text-anchor="middle">FLATIRON</textPath>
+</text>
+
+<path id="bot-arc" d="M 144,365 A 196,196 0 0,0 536,365" fill="none"/>
+<text class="badge-text">
+  <textPath href="#bot-arc" startOffset="50%" text-anchor="middle">DETAIL</textPath>
+</text>
+
+<text text-anchor="middle" x="340" y="620" style="font-family: 'Josefin Sans', sans-serif; font-weight: 600; fill: #C94B38; letter-spacing: 0.28em; font-size: 11px;">BOULDER · CO</text>
+<circle cx="252" cy="616" r="2.5" fill="#C94B38"/>
+<circle cx="428" cy="616" r="2.5" fill="#C94B38"/>
+</svg>
