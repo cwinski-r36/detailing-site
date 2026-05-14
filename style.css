@@ -660,6 +660,32 @@ body {
   color: #254857;
 }
 
+.coming-soon-card {
+  position: relative;
+}
+
+.coming-soon-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background: #254857;
+  color: #EBAA20;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0.4rem 1rem;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.coming-soon-card .img-placeholder {
+  opacity: 0.4;
+}
+
 .ba-divider {
   width: 3px;
   background-color: #fff;
