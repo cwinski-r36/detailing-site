@@ -55,6 +55,12 @@
       toggle.classList.toggle('open');
       nav.classList.toggle('open');
     });
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.classList.remove('open');
+        nav.classList.remove('open');
+      });
+    });
   </script>
 
   <!-- Page Header -->
