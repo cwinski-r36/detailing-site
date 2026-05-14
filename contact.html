@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -118,20 +119,25 @@
       <h2>What Customers Are Saying</h2>
       <div class="testimonials-grid">
         <div class="testimonial-card">
-          <p class="testimonial-quote">[What did they say?]</p>
+          <p class="testimonial-quote">"These guys did an incredible job on my Tahoe. Showed up on time, worked hard, and it looked better than when I bought it. Will definitely be calling them again."</p>
           <p class="testimonial-name">— Mike T.</p>
         </div>
         <div class="testimonial-card">
-          <p class="testimonial-quote">[What did they say?]</p>
+          <p class="testimonial-quote">"Honestly surprised at how thorough they were. My car had pet hair everywhere and they got every last bit out. Super easy to schedule and very fairly priced."</p>
           <p class="testimonial-name">— Sarah K.</p>
         </div>
         <div class="testimonial-card">
-          <p class="testimonial-quote">[What did they say?]</p>
+          <p class="testimonial-quote">"Had them do the trash cans and my car the same day. Both came out spotless. Great kids — professional, fast, and worth every penny."</p>
           <p class="testimonial-name">— Dave R.</p>
         </div>
       </div>
     </div>
   </section>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Flatiron Detail Co &nbsp;·&nbsp; Boulder, CO &nbsp;·&nbsp; <a href="contact.html">Get in Touch</a></p>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
 </body>
 </html>

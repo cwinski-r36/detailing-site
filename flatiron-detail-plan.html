@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flatiron Detail Co — Next Steps Plan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ---- Base ---- */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      font-size: 13px;
+      color: #1e3a47;
+      background: #fff;
+      padding: 48px 56px;
+      max-width: 860px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ---- Header ---- */
+    .doc-header {
+      border-bottom: 3px solid #EBAA20;
+      padding-bottom: 20px;
+      margin-bottom: 36px;
+    }
+
+    .doc-header h1 {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: #254857;
+    }
+
+    .doc-header .subtitle {
+      font-family: 'Lato', sans-serif;
+      font-size: 12px;
+      color: #5790A1;
+      margin-top: 4px;
+      letter-spacing: 0.05em;
+    }
+
+    /* ---- Section headings ---- */
+    .section {
+      margin-bottom: 36px;
+      page-break-inside: avoid;
+    }
+
+    .section-title {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: #fff;
+      background: #254857;
+      padding: 8px 14px;
+      margin-bottom: 16px;
+      border-left: 5px solid #EBAA20;
+    }
+
+    .section-title span {
+      color: #EBAA20;
+      margin-right: 8px;
+    }
+
+    h3 {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #5790A1;
+      margin: 18px 0 8px;
+    }
+
+    p { margin-bottom: 10px; }
+
+    /* ---- Tables ---- */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 16px;
+      font-size: 12.5px;
+    }
+
+    thead tr {
+      background: #f0f4f6;
+    }
+
+    thead th {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #254857;
+      padding: 8px 12px;
+      text-align: left;
+      border-bottom: 2px solid #B6C9D2;
+    }
+
+    tbody tr:nth-child(even) { background: #f8fafb; }
+
+    tbody td {
+      padding: 7px 12px;
+      border-bottom: 1px solid #e4ecef;
+      color: #1e3a47;
+      vertical-align: top;
+    }
+
+    tbody td:last-child { color: #5790A1; }
+
+    .price { font-weight: 700; color: #254857 !important; }
+    .addon { color: #C94B38 !important; font-size: 12px; }
+    .status-empty { color: #C94B38 !important; font-weight: 700; }
+    .status-confirm { color: #EBAA20 !important; font-weight: 700; }
+
+    /* ---- Callout boxes ---- */
+    .callout {
+      background: #f0f4f6;
+      border-left: 4px solid #EBAA20;
+      padding: 10px 14px;
+      margin: 12px 0 16px;
+      font-size: 12.5px;
+      color: #254857;
+    }
+
+    .callout strong {
+      font-family: 'Josefin Sans', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #EBAA20;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* ---- Steps ---- */
+    ol {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    ol li {
+      margin-bottom: 6px;
+      font-size: 12.5px;
+    }
+
+    /* ---- DNS record table ---- */
+    .dns-table thead th:first-child { width: 80px; }
+    .dns-table thead th:nth-child(2) { width: 80px; }
+    code {
+      font-family: monospace;
+      font-size: 11.5px;
+      background: #eef2f4;
+      padding: 1px 5px;
+      border-radius: 3px;
+      color: #254857;
+    }
+
+    /* ---- Master checklist ---- */
+    .checklist table tbody td:nth-child(2) { color: #1e3a47 !important; }
+    .checklist table tbody td:nth-child(3) { font-weight: 600; color: #254857 !important; }
+    .checklist table tbody td:last-child { color: #C94B38 !important; font-size: 16px; text-align: center; }
+
+    /* ---- Page footer ---- */
+    .doc-footer {
+      margin-top: 40px;
+      padding-top: 12px;
+      border-top: 1px solid #B6C9D2;
+      font-size: 11px;
+      color: #949CA6;
+      text-align: center;
+      font-family: 'Josefin Sans', sans-serif;
+      letter-spacing: 0.06em;
+    }
+
+    /* ---- Print styles ---- */
+    @page { margin: 1.5cm; }
+    @media print {
+      body { padding: 0; margin: 0; font-size: 12px; }
+      .section { page-break-inside: avoid; }
+      .section-title { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      thead tr { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      tbody tr:nth-child(even) { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .callout { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="doc-header">
+    <h1>FLATIRON DETAIL CO — NEXT STEPS PLAN</h1>
+    <p class="subtitle">Prepared April 2026 &nbsp;·&nbsp; Review with Noah &amp; Halen</p>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 1: CONTENT -->
+  <!-- ============================================================ -->
+  <div class="section">
+    <div class="section-title"><span>1</span> Content to Finalize</div>
+
+    <h3>Items Still Needed</h3>
+    <table>
+      <thead>
+        <tr><th>Page</th><th>Item</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>About</td><td>Noah's bio — age, grade, interests outside work</td><td class="status-empty">Empty</td></tr>
+        <tr><td>About</td><td>Halen's bio — age, grade, interests outside work</td><td class="status-empty">Empty</td></tr>
+        <tr><td>Contact</td><td>Phone number — verify it's correct on the site</td><td class="status-confirm">Confirm</td></tr>
+        <tr><td>Contact</td><td>3 customer testimonials — first name + last initial + quote</td><td class="status-empty">Empty</td></tr>
+        <tr><td>Gallery</td><td>Before &amp; after photos — car cleaning (4 pairs)</td><td class="status-empty">Empty</td></tr>
+        <tr><td>Gallery</td><td>Before &amp; after photos — trash can cleaning (3 pairs)</td><td class="status-empty">Empty</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Services Review — Confirm What You Actually Offer</h3>
+    <p>Before the site goes live, Noah and Halen need to go through every service listed and confirm they can deliver it. Some of the services currently on the site require specific equipment, products, or experience. Don't advertise something you're not ready to do yet — it's better to start with a tighter menu and add services as you grow.</p>
+
+    <table>
+      <thead><tr><th>Service</th><th>Question to Answer</th></tr></thead>
+      <tbody>
+        <tr><td>Clay bar treatment</td><td>Do you have clay bars and the right lubricant? Have you practiced this?</td></tr>
+        <tr><td>Interior shampoo</td><td>Do you have a carpet/upholstery shampooer or foam cleaner? Wet-dry vac?</td></tr>
+        <tr><td>Leather &amp; surface conditioning</td><td>Do you have leather conditioner? Comfortable doing this on someone's car?</td></tr>
+        <tr><td>Paint correction prep</td><td>This is advanced work — remove it unless you're confident and equipped</td></tr>
+        <tr><td>Engine bay clean</td><td>Requires care around electrics — do you have experience with this?</td></tr>
+        <tr><td>Wax &amp; polish</td><td>Do you have the right applicator pads and polish products?</td></tr>
+        <tr><td>Pet hair removal</td><td>Do you have the right tools (rubber brush, lint roller, vacuum attachments)?</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <strong>Action Item for Noah &amp; Halen</strong>
+      Go through the list above together. For each service: do you have the equipment, the products, and the confidence to do it on a customer's car? Remove anything you're not ready for. You can always add services back later once you're set up. It's much better to under-promise and over-deliver than the other way around.
+    </div>
+
+    <h3>Pricing Overhaul</h3>
+    <p>The goal is for a customer to land on the site, see exactly what they'll pay, and feel confident booking — no guessing. The recommendation is a <strong>base price by vehicle size</strong> plus clearly named add-ons.</p>
+
+    <h3>Car Wash</h3>
+    <table>
+      <thead><tr><th>Vehicle</th><th>Price</th></tr></thead>
+      <tbody>
+        <tr><td>Sedan / Coupe</td><td class="price">$45</td></tr>
+        <tr><td>SUV / Truck / Minivan</td><td class="price">$65</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Car Detail &nbsp;<small style="font-weight:300;font-size:11px;text-transform:none;letter-spacing:0">(exterior + interior)</small></h3>
+    <table>
+      <thead><tr><th>Vehicle</th><th>Price</th></tr></thead>
+      <tbody>
+        <tr><td>Sedan / Coupe</td><td class="price">$150</td></tr>
+        <tr><td>SUV / Truck / Minivan</td><td class="price">$195</td></tr>
+        <tr><td>Add-on: Heavily soiled interior</td><td class="addon">+$40</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Full Detail &nbsp;<small style="font-weight:300;font-size:11px;text-transform:none;letter-spacing:0">(deep interior + full exterior)</small></h3>
+    <table>
+      <thead><tr><th>Vehicle</th><th>Price</th></tr></thead>
+      <tbody>
+        <tr><td>Sedan / Coupe</td><td class="price">$280</td></tr>
+        <tr><td>SUV / Truck / Minivan</td><td class="price">$350</td></tr>
+        <tr><td>Add-on: Heavily soiled interior</td><td class="addon">+$50</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Add-On Services</h3>
+    <table>
+      <thead><tr><th>Service</th><th>Price</th></tr></thead>
+      <tbody>
+        <tr><td>Wax &amp; Polish</td><td class="price">$25</td></tr>
+        <tr><td>Pet Hair Removal</td><td class="price">$35–$50</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Trash Can Cleaning</h3>
+    <table>
+      <thead><tr><th>Option</th><th>Price</th></tr></thead>
+      <tbody>
+        <tr><td>Single Bin</td><td class="price">$20</td></tr>
+        <tr><td>Bundle — 3 Bins</td><td class="price">$50</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <strong>Confirm Before Publishing</strong>
+      Review these numbers against local competitors (Driven Auto Spa, etc.) and make sure you're comfortable with them. Once finalized, the website pricing gets updated in one sitting.
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 2: DOMAIN -->
+  <!-- ============================================================ -->
+  <div class="section">
+    <div class="section-title"><span>2</span> Buying a Domain &amp; Connecting to GitHub</div>
+
+    <h3>Step 1 — Choose &amp; Buy a Domain</h3>
+    <p>Recommended registrar: <strong>Namecheap.com</strong> — straightforward, ~$12–15/year for a .com, no surprise fees.</p>
+    <table>
+      <thead><tr><th>Option</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td><code>flatirondetail.com</code></td><td>Best choice if available</td></tr>
+        <tr><td><code>flatirondetailco.com</code></td><td>Good fallback</td></tr>
+        <tr><td><code>flatirondetailboulder.com</code></td><td>Most specific, always available</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Step 2 — Add DNS Records in Namecheap</h3>
+    <p>After purchasing, go to your domain's Advanced DNS settings and add these records exactly:</p>
+    <table class="dns-table">
+      <thead><tr><th>Type</th><th>Host</th><th>Value</th></tr></thead>
+      <tbody>
+        <tr><td>A</td><td>@</td><td><code>185.199.108.153</code></td></tr>
+        <tr><td>A</td><td>@</td><td><code>185.199.109.153</code></td></tr>
+        <tr><td>A</td><td>@</td><td><code>185.199.110.153</code></td></tr>
+        <tr><td>A</td><td>@</td><td><code>185.199.111.153</code></td></tr>
+        <tr><td>CNAME</td><td>www</td><td><code>cwinski-r36.github.io</code></td></tr>
+      </tbody>
+    </table>
+
+    <h3>Step 3 — Connect in GitHub</h3>
+    <ol>
+      <li>Go to the <strong>detailing-site</strong> repo on GitHub</li>
+      <li>Settings → Pages → Custom domain → type your domain (e.g. <code>flatirondetail.com</code>) → Save</li>
+      <li>Check <strong>Enforce HTTPS</strong></li>
+      <li>Wait up to 30 minutes for DNS to propagate — then the site is live at your real domain</li>
+    </ol>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 3: EMAIL -->
+  <!-- ============================================================ -->
+  <div class="section">
+    <div class="section-title"><span>3</span> Business Email &amp; iPhone Setup</div>
+
+    <h3>For Now — Free Gmail Account</h3>
+    <p>Start with a free Gmail address: <strong>flatirondetail@gmail.com</strong> (or similar — check availability when creating it). It's free, works great on iPhone, and is perfectly fine for a new business. Once the business is making money, upgrade to a custom domain email like <code>noah@flatirondetail.com</code> using Google Workspace (~$6/month).</p>
+
+    <div class="callout">
+      <strong>Check Availability First</strong>
+      Go to gmail.com and try to create the account — popular names get taken. Good options to try: <code>flatirondetail@gmail.com</code>, <code>flatirondetailco@gmail.com</code>, <code>flatirondetailboulder@gmail.com</code>
+    </div>
+
+    <h3>Setup Steps</h3>
+    <ol>
+      <li>Go to <strong>gmail.com</strong> → Create account → choose a business-sounding username</li>
+      <li>Complete the signup (use a real recovery phone number)</li>
+      <li>Update the email address on the website Contact page to the new Gmail</li>
+    </ol>
+
+    <h3>Adding to iPhone</h3>
+    <ol>
+      <li>Open <strong>Settings → Mail → Accounts → Add Account</strong></li>
+      <li>Tap <strong>Google</strong></li>
+      <li>Sign in with the new Gmail address and password</li>
+      <li>Toggle Mail on → Save</li>
+    </ol>
+    <p>Done — shows up in the iPhone Mail app immediately. Both Noah and Halen can sign in on their own phones so they both see incoming messages.</p>
+
+    <div class="callout">
+      <strong>Future Upgrade</strong>
+      Once you have a domain name and the business is earning, switch to Google Workspace (~$6/month) for a professional <code>@flatirondetail.com</code> address. The setup takes about 30 minutes and everything migrates easily.
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- SECTION 4: SQUARE APPOINTMENTS -->
+  <!-- ============================================================ -->
+  <div class="section">
+    <div class="section-title"><span>4</span> Square Appointments — Online Booking</div>
+
+    <h3>What It Does</h3>
+    <p>Customers visit the site, tap "Book Now," pick a service, pick a date and time, and book themselves. Noah and Halen get a push notification and it appears in their calendar automatically. No back-and-forth texting to schedule.</p>
+
+    <h3>Cost</h3>
+    <p>Square Appointments is <strong>free</strong> for small teams. You only pay the standard Square processing fee (2.6% + 10¢) if you collect payment at booking — which you can skip entirely and collect in person instead.</p>
+
+    <h3>Part A — Create the Square Account</h3>
+    <ol>
+      <li>Go to <strong>squareup.com/appointments</strong> and sign up (free)</li>
+      <li>Download the <strong>Square Appointments</strong> app on both iPhones</li>
+      <li>In the app: <strong>Services</strong> → add each service with name, duration, and price</li>
+      <li>Set your availability — the days and hours you're willing to take bookings</li>
+      <li>Add both Noah and Halen as team members so the calendar is shared between them</li>
+    </ol>
+
+    <h3>Suggested Services to Add in Square</h3>
+    <table>
+      <thead><tr><th>Service Name</th><th>Duration</th><th>Price</th></tr></thead>
+      <tbody>
+        <tr><td>Car Wash — Sedan</td><td>45 min</td><td class="price">$45</td></tr>
+        <tr><td>Car Wash — SUV/Truck</td><td>60 min</td><td class="price">$65</td></tr>
+        <tr><td>Car Detail — Sedan</td><td>2 hrs</td><td class="price">$150</td></tr>
+        <tr><td>Car Detail — SUV/Truck</td><td>2.5 hrs</td><td class="price">$195</td></tr>
+        <tr><td>Full Detail — Sedan</td><td>3.5 hrs</td><td class="price">$280</td></tr>
+        <tr><td>Full Detail — SUV/Truck</td><td>4.5 hrs</td><td class="price">$350</td></tr>
+        <tr><td>Trash Can — Single Bin</td><td>20 min</td><td class="price">$20</td></tr>
+        <tr><td>Trash Can — Bundle (3 Bins)</td><td>45 min</td><td class="price">$50</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Part B — Connect to the Website</h3>
+    <ol>
+      <li>In Square dashboard → <strong>Online Booking</strong> → copy your booking link</li>
+      <li>The "Book Now" buttons on the website get updated to point to that link — no coding needed, just a URL swap</li>
+      <li>Optional: Square also provides an embeddable widget that can sit directly on the Contact page</li>
+    </ol>
+
+    <h3>Part C — Day-to-Day Management</h3>
+    <ol>
+      <li>New bookings trigger a <strong>push notification</strong> on their iPhones via the Square app</li>
+      <li>View and manage the calendar from the app — accept, reschedule, or cancel bookings</li>
+      <li>Customers automatically receive a <strong>confirmation email</strong> when they book</li>
+      <li>Square sends automatic <strong>24-hour reminders</strong> to customers (reduces no-shows)</li>
+      <li>Block off unavailable times directly in the app (school days, vacations, etc.)</li>
+    </ol>
+
+    <div class="callout">
+      <strong>Pro Tip</strong>
+      Set a minimum booking lead time of 24 hours so they're never getting same-day bookings they can't handle.
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- MASTER CHECKLIST -->
+  <!-- ============================================================ -->
+  <div class="section checklist">
+    <div class="section-title"><span>✓</span> Master Checklist</div>
+    <table>
+      <thead><tr><th>#</th><th>Task</th><th>Who</th><th>Done</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Review every service on the site — confirm you can do it and have the equipment</td><td>Noah + Halen</td><td>☐</td></tr>
+        <tr><td>2</td><td>Remove any services you're not ready to offer yet</td><td>Charlie</td><td>☐</td></tr>
+        <tr><td>3</td><td>Write Noah's bio for the About page</td><td>Noah</td><td>☐</td></tr>
+        <tr><td>4</td><td>Write Halen's bio for the About page</td><td>Halen</td><td>☐</td></tr>
+        <tr><td>5</td><td>Confirm phone number is correct on site</td><td>Noah</td><td>☐</td></tr>
+        <tr><td>6</td><td>Collect 3 customer testimonials (text a happy customer)</td><td>Noah + Halen</td><td>☐</td></tr>
+        <tr><td>7</td><td>Take before &amp; after photos for gallery</td><td>Noah + Halen</td><td>☐</td></tr>
+        <tr><td>8</td><td>Finalize pricing (sedan vs. SUV tiers + add-ons)</td><td>Noah + Charlie</td><td>☐</td></tr>
+        <tr><td>9</td><td>Update pricing on website once confirmed</td><td>Charlie</td><td>☐</td></tr>
+        <tr><td>10</td><td>Buy domain name on Namecheap</td><td>Charlie</td><td>☐</td></tr>
+        <tr><td>11</td><td>Set up GitHub Pages custom domain + HTTPS</td><td>Charlie</td><td>☐</td></tr>
+        <tr><td>12</td><td>Create flatirondetail@gmail.com (or similar)</td><td>Noah</td><td>☐</td></tr>
+        <tr><td>13</td><td>Add Gmail to both iPhones</td><td>Noah + Halen</td><td>☐</td></tr>
+        <tr><td>14</td><td>Create Square Appointments account</td><td>Noah</td><td>☐</td></tr>
+        <tr><td>15</td><td>Add all services + availability in Square</td><td>Noah + Halen</td><td>☐</td></tr>
+        <tr><td>16</td><td>Update "Book Now" buttons to Square booking link</td><td>Charlie</td><td>☐</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="doc-footer">
+    FLATIRON DETAIL CO &nbsp;·&nbsp; BOULDER, CO &nbsp;·&nbsp; April 2026
+  </div>
+
+</body>
+</html>

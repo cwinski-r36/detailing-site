@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -74,27 +75,12 @@
       <div class="before-after-card">
         <div class="ba-images">
           <div class="ba-panel">
-            <div class="img-placeholder"></div>
+            <img src="images/Dirty1.jpg" alt="Before" />
             <span class="ba-label before">Before</span>
           </div>
           <div class="ba-divider"></div>
           <div class="ba-panel">
-            <div class="img-placeholder"></div>
-            <span class="ba-label after">After</span>
-          </div>
-        </div>
-        <p class="card-caption">Exterior Detail — Full Wash &amp; Polish</p>
-      </div>
-
-      <div class="before-after-card">
-        <div class="ba-images">
-          <div class="ba-panel">
-            <div class="img-placeholder"></div>
-            <span class="ba-label before">Before</span>
-          </div>
-          <div class="ba-divider"></div>
-          <div class="ba-panel">
-            <div class="img-placeholder"></div>
+            <img src="images/Clean1.jpg" alt="After" />
             <span class="ba-label after">After</span>
           </div>
         </div>
@@ -104,32 +90,18 @@
       <div class="before-after-card">
         <div class="ba-images">
           <div class="ba-panel">
-            <div class="img-placeholder"></div>
+            <img src="images/Dirty2.PNG" alt="Before" />
             <span class="ba-label before">Before</span>
           </div>
           <div class="ba-divider"></div>
           <div class="ba-panel">
-            <div class="img-placeholder"></div>
+            <img src="images/Clean2.PNG" alt="After" />
             <span class="ba-label after">After</span>
           </div>
         </div>
-        <p class="card-caption">Wheels &amp; Tires — Decontamination</p>
+        <p class="card-caption">Interior Detail — Deep Clean &amp; Vacuum</p>
       </div>
 
-      <div class="before-after-card">
-        <div class="ba-images">
-          <div class="ba-panel">
-            <div class="img-placeholder"></div>
-            <span class="ba-label before">Before</span>
-          </div>
-          <div class="ba-divider"></div>
-          <div class="ba-panel">
-            <div class="img-placeholder"></div>
-            <span class="ba-label after">After</span>
-          </div>
-        </div>
-        <p class="card-caption">Engine Bay — Degreased &amp; Cleaned</p>
-      </div>
 
     </div>
   </section>
@@ -142,20 +114,6 @@
     </div>
     <div class="gallery-grid">
 
-      <div class="before-after-card">
-        <div class="ba-images">
-          <div class="ba-panel">
-            <div class="img-placeholder"></div>
-            <span class="ba-label before">Before</span>
-          </div>
-          <div class="ba-divider"></div>
-          <div class="ba-panel">
-            <div class="img-placeholder"></div>
-            <span class="ba-label after">After</span>
-          </div>
-        </div>
-        <p class="card-caption">96-Gallon Bin — Full Sanitize</p>
-      </div>
 
       <div class="before-after-card">
         <div class="ba-images">
@@ -187,23 +145,14 @@
         <p class="card-caption">64-Gallon Bin — Deodorize &amp; Rinse</p>
       </div>
 
-      <div class="before-after-card">
-        <div class="ba-images">
-          <div class="ba-panel">
-            <div class="img-placeholder"></div>
-            <span class="ba-label before">Before</span>
-          </div>
-          <div class="ba-divider"></div>
-          <div class="ba-panel">
-            <div class="img-placeholder"></div>
-            <span class="ba-label after">After</span>
-          </div>
-        </div>
-        <p class="card-caption">Commercial Bin — Industrial Clean</p>
-      </div>
 
     </div>
   </section>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Flatiron Detail Co &nbsp;·&nbsp; Boulder, CO &nbsp;·&nbsp; <a href="contact.html">Get in Touch</a></p>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
 </body>
 </html>

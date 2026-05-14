@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -76,54 +77,81 @@
         <h2>Packages</h2>
       </div>
 
-      <!-- Main Car Packages -->
+      <!-- Car Washes -->
+      <div class="section-heading section-heading--sub">
+        <h2>Car Wash</h2>
+      </div>
       <div class="packages-grid">
 
         <div class="package-card">
           <div class="package-header">
-            <h3>Car Wash</h3>
-            <p class="package-price">Starting at $50</p>
+            <h3>Exterior Car Wash</h3>
+            <p class="package-price">$50</p>
           </div>
           <ul class="package-features">
-            <li>Exterior hand wash</li>
+            <li>Exterior hand wash &amp; dry</li>
             <li>Wheel &amp; tire clean</li>
             <li>Windows cleaned</li>
-            <li>Interior vacuum</li>
-            <li>Dashboard wipe-down</li>
           </ul>
           <a href="contact.html" class="btn btn-primary">Book Now</a>
         </div>
+
+        <div class="package-card">
+          <div class="package-header">
+            <h3>Exterior SUV / Truck / Van Wash</h3>
+            <p class="package-price">$70</p>
+          </div>
+          <ul class="package-features">
+            <li>Exterior hand wash &amp; dry</li>
+            <li>Wheel &amp; tire clean</li>
+            <li>Windows cleaned</li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Book Now</a>
+        </div>
+
+      </div>
+
+      <!-- Car Detail -->
+      <div class="section-heading section-heading--sub">
+        <h2>Car Detail</h2>
+      </div>
+      <div class="packages-grid">
 
         <div class="package-card package-card--featured">
           <div class="package-badge">Most Popular</div>
           <div class="package-header">
             <h3>Car Detail</h3>
-            <p class="package-price">Starting at $150</p>
+            <p class="package-price">$150</p>
           </div>
           <ul class="package-features">
             <li>Full exterior hand wash &amp; dry</li>
-            <li>Clay bar treatment</li>
             <li>Wheel &amp; tire deep clean</li>
-            <li>Windows cleaned inside &amp; out</li>
-            <li>Full interior vacuum &amp; shampoo</li>
-            <li>Leather &amp; surface conditioning</li>
-            <li>Air freshener</li>
+            <li>Windows &amp; mirrors cleaned inside &amp; out</li>
+            <li>Full interior vacuum</li>
+            <li>Dash &amp; console wipe-down</li>
+            <li>Cup holders &amp; crevices cleaned</li>
+            <li>Door jambs wiped down</li>
+            <li>Trunk vacuumed</li>
+            <li>Rubber floor mat wash &amp; dry</li>
           </ul>
           <a href="contact.html" class="btn btn-primary">Book Now</a>
         </div>
 
         <div class="package-card">
           <div class="package-header">
-            <h3>Full Detail</h3>
-            <p class="package-price">Starting at $240</p>
+            <h3>SUV / Truck / Van Detail</h3>
+            <p class="package-price">$180</p>
           </div>
           <ul class="package-features">
-            <li>Everything in Car Detail</li>
-            <li>Full interior deep clean</li>
-            <li>Seat &amp; carpet shampoo</li>
-            <li>Door panel &amp; trunk detail</li>
-            <li>Engine bay clean</li>
-            <li>Paint correction prep</li>
+            <li>Full exterior hand wash &amp; dry</li>
+            <li>Wheel &amp; tire deep clean</li>
+            <li>Windows &amp; mirrors cleaned inside &amp; out</li>
+            <li>Full interior vacuum</li>
+            <li>Dash &amp; console wipe-down</li>
+            <li>Cup holders &amp; crevices cleaned</li>
+            <li>Door jambs wiped down</li>
+            <li>Trunk vacuumed</li>
+            <li>Rubber floor mat wash &amp; dry</li>
           </ul>
           <a href="contact.html" class="btn btn-primary">Book Now</a>
         </div>
@@ -137,12 +165,12 @@
       </div>
       <div class="extras-grid">
         <div class="extra-card">
-          <p class="extra-name">Wax &amp; Polish</p>
-          <p class="extra-price">$25</p>
+          <p class="extra-name">Wax</p>
+          <p class="extra-price">$40</p>
         </div>
         <div class="extra-card">
           <p class="extra-name">Pet Hair Removal</p>
-          <p class="extra-price">$35–$50</p>
+          <p class="extra-price">$40</p>
         </div>
       </div>
 
@@ -187,6 +215,11 @@
 
     </div>
   </section>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Flatiron Detail Co &nbsp;·&nbsp; Boulder, CO &nbsp;·&nbsp; <a href="contact.html">Get in Touch</a></p>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
 </body>
 </html>

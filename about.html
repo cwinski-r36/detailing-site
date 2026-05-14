@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Lato:wght@300;400;700&family=Belanosima:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -69,7 +70,7 @@
 
       <div class="about-block">
         <h2>Our Story</h2>
-        <p>Noah &amp; Halen Detailing started with a simple idea: your car deserves better than a drive-through rinse. We're two friends from Boulder who turned a passion for clean cars into a hands-on detailing business. Every job we take on, we treat like it's our own vehicle.</p>
+        <p>Flatiron Detail started with a simple idea: your car deserves better than a drive-through rinse. We're two friends from Boulder who turned a passion for clean cars into a hands-on detailing business. Every job we take on, we treat like it's our own vehicle.</p>
       </div>
 
       <div class="about-block">
@@ -106,20 +107,18 @@
 
       <div class="team-card">
         <div class="team-info">
-          <h3>Noah</h3>
+          <h3>Noah &amp; Halen</h3>
           <p>We're Noah and Halen, best friends and soccer players at Fairview High School in Boulder. We started Flatiron Detail because we wanted to build something real outside of school and sports.</p>
-        </div>
-      </div>
-
-      <div class="team-card">
-        <div class="team-info">
-          <h3>Halen</h3>
-          <p>[Add Halen's age, grade, interests outside work]</p>
         </div>
       </div>
 
     </div>
   </section>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Flatiron Detail Co &nbsp;·&nbsp; Boulder, CO &nbsp;·&nbsp; <a href="contact.html">Get in Touch</a></p>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
 </body>
 </html>
