@@ -546,6 +546,33 @@ body {
   line-height: 1.6;
 }
 
+.form-success {
+  display: none;
+  background: #f0f4f6;
+  border-left: 4px solid #EBAA20;
+  padding: 1.5rem;
+  border-radius: 3px;
+  margin-top: 1rem;
+}
+
+.form-success p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #254857 !important;
+  letter-spacing: 0.04em;
+}
+
+.contact-info a {
+  color: #EBAA20;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.contact-info a:hover {
+  opacity: 0.75;
+}
+
 /* =========================================
    GALLERY PAGE
    ========================================= */
